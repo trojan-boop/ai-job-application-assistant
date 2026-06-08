@@ -2,6 +2,13 @@
 
 Full-stack MVP: React frontend + Express API with JWT auth, resume analysis, cover letter generation, and application tracking.
 
+## Documentation
+
+| Doc | Purpose |
+|-----|---------|
+| **[Architecture & Interview Guide](docs/ARCHITECTURE.md)** | Full system design, flows, diagrams, interview Q&A |
+| **[API Reference](docs/API.md)** | All endpoints with request/response examples |
+
 ## Features
 
 | Feature | Description |
@@ -62,6 +69,16 @@ npm run dev
 - **Frontend:** React 19, TypeScript, Vite, React Router
 - **Backend:** Express 5, JWT, bcrypt, OpenAI SDK, JSON file store
 
+## Project structure (monorepo)
+
+```
+src/      → Frontend (React + Vite)
+server/   → Backend (Express API)
+docs/     → Architecture & API documentation
+```
+
+Both FE and BE share one `package.json`. `npm run dev` starts both.
+
 ## Production notes
 
-Replace the JSON file store with PostgreSQL/MongoDB, use HTTP-only cookies or refresh tokens, rate-limit AI routes, and never commit `.env`.
+Replace the JSON file store with PostgreSQL/MongoDB, use HTTP-only cookies or refresh tokens, rate-limit AI routes, and never commit `.env`. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full production checklist.
